@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>SiteSpark</title>
+</head>
+<body>
+   <nav>
+    <ul class="sidebar">
+        <li><a  onclick="hideSidebar()" ><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        
+        <li><a href="#">Home</a></li>
+        <li><a href="#book">Book Now</a></li>
+        <li><a href="#mon">Pricing</a></li>
+        <li><a href="#foot">About us</a></li>
+
+        
+    </ul>
+    <ul >
+        <li ><a href="#">SiteSpark</a></li class=".hideOnMobile">
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#book">Book Now</a></li>
+        <li class="hideOnMobile"><a href="#mon">Pricing</a></li>
+        <li class="hideOnMobile"><a href="#foot">About us</a></li>
+        
+
+        <li class="menu-btn"><a  onclick="showSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+    <div class="banner">
+<div class="banitem">
+    <img src="logoo.jpg" alt="" class="lg">
+    <h2 align="center"><b>Build Resume and Portfolio websites</b></h2>
+
+</div>
+<img src="ban.png" class="banimg" alt="">
+    </div>
+<div class="badadabba" id="book">
+    
+    <form action="/action_page.php" >
+        <div class="container">
+         <div class="cento">
+            <h2>Some Details</h2>
+            <p>Please fill in this form for the further process</p>
+            <hr>
+        
+         </div>
+          <label for="name"><b >Full Name</b></label>
+          <input type="text" placeholder="Enter Your Full Name"   id="name" value="" required>
+      
+          <label for="psw"><b>What do you want?</b></label>
+
+          <select  name="cars" aria-placeholder="select" id="opt" required>
+            <option value="Portfolio">Portfolio</option>
+            <option value="Resume">Resume</option>
+            
+          </select>
+          <label for="psw-repeat"><b>Enter Email</b></label>
+          <input type="text" name="email" placeholder="Enter Your Email" value="" name="psw-repeat" id="email" required>
+          <hr>
+         
+      
+         <div class="cento"> <button type="button" onclick="whatsapp()" class="registerbtn">Book Now</button></div>
+        </div>
+        
+        
+      </form>
+</div>
+<div class="money" id="mon">
+    <p class="montext" align="center"><b>We build Resume and Portfolio in just 100Rs</b></p>
+    <img src="100rs.jpg" class="moneyimg" alt="">
+</div>
+
+<footer id="foot">
+    <div class="footcont">
+        <p class="compname cento">SiteSpark</p>
+        <br/>
+        <p class="compcnt">Founded by Pratham Saxena, SiteSpark is a dynamic and innovative platform dedicated to helping individuals build striking resumes and portfolios at affordable prices. Our mission is to empower our customers to shine in the professional world by providing them with the tools they need to showcase their skills, experiences, and achievements in a way that truly stands out.
+
+            What sets SiteSpark apart is our commitment to making professional self-presentation accessible to all. We believe that everyone should have the opportunity to create a compelling resume and portfolio that reflects their unique talents and aspirations.<br/><br/> 
+
+            
+            </p>
+            <p class="compcnt hd" >Our user-friendly platform is designed to cater to a wide range of needs, from recent graduates looking to make their mark to seasoned professionals seeking to elevate their career prospects.
+            
+                At SiteSpark, we combine cutting-edge technology with expert guidance to ensure that your resume and portfolio effectively convey your personal brand. We understand that your professional identity is more than just a document – it's a representation of your potential and your vision for the future.
+                
+                Join us at SiteSpark, and together, we'll ignite your professional journey. Affordable, user-friendly, and driven by a passion for your success, SiteSpark is here to help you make your mark in the professional world.
+                
+                
+                
+                </p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+    function showSidebar(){
+        const sidebar=document.querySelector('.sidebar');
+        sidebar.style.display='flex';
+    }
+    function hideSidebar(){
+        const sidebar1=document.querySelector('.sidebar');
+        sidebar1.style.display='none';
+    }
+    function whatsapp(){
+        var name=document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+     var jj=document.getElementById("opt").value;
+       
+      
+    var url = "https://wa.me/919310256432?text="+"name : "+name +"%0a"+"email : "+email +"%0a"+"make a : "+jj +"%0a";
+    window.open(url,'_blank').focus();
+    }
+   </script>
+</body>
+</html>
